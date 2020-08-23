@@ -26,7 +26,7 @@ jobs:
       with:
         root_file: cv.tex
         working_directory: cv_rus
-        args: -jobname=cv -file-line-error -halt-on-error -interaction=nonstopmode
+        args: -jobname=cv -interaction=nonstopmode
         compiler: xelatex
 
     # Runs a set of commands using the runners shell
