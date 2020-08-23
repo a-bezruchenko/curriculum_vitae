@@ -31,7 +31,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Upload doc
-      uses: actions/upload-artifact@2
+      uses: actions/upload-artifact@v2
       with:
         name: cv_rus
         path: cv_rus/cv_rus.pdf
