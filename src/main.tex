@@ -1,0 +1,224 @@
+  %------------------------------------------------------------------------------
+% CV in Latex
+% Author : Nikita Avdosev
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+%-----FONT OPTIONS-------------------------------------------------------------
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}
+      \text{#1} \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\GithubProjectDescription}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.5\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \emph{\small{#1}} 
+      {\href{#2}{\includegraphics[scale=.3]{images/GitHub-Mark-32px.png}}} 
+      $|$ 
+      #3
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+
+
+\begin{center}
+   \textbf{\Huge \scshape Avdosev Nikita} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+   \small +7 917-727-9031 $|$ 
+   \href{mailto:avdosev1@yandex.ru}{\underline{avdosev1@yandex.ru}} $|$\\
+   % Be sure to use a professional *personal* email address
+   \href{https://github.com/avdosev}{\underline{Github}} $|$
+   \href{https://www.linkedin.com/in/avdosev/}{\underline{LinkedIn}} $|$
+   \href{https://habr.com/ru/users/avdosev/}{\underline{Habr}}
+\end{center}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    % \CVSubheading
+    %   {{Master of Computer Science }}{Sep. 2021 -- July 2023}
+    %   {Volgograd State Technical University}{Volgograd, Russia}
+
+    \CVSubheading
+      {{Bachelor of Computer Science }}{Sep. 2017 -- July 2021}
+      {Volgograd State Technical University}{Volgograd, Russia}
+
+
+  \CVSubHeadingListEnd
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+
+\section{Work Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{Why it is important to this employer}
+%      \CVItemListEnd
+
+    \CVSubheading
+      {Software C++ Engineer Intern}{July 2020 -- August 2020}
+      {Intel Corporation}{Nizhny Novgorod, Russia}
+    \CVItemListStart
+      \CVItem{Developed a smart pointer for persistent memory and a specialization for std::atomic}
+      \CVItem{Moved the used collections to use a smart pointer, gaining a performance increase of 10-20\%}
+      \CVItem{Specialization in working with persistent memory and libraries libpmemobj-cpp, pmdk}
+    \CVItemListEnd
+
+    \CVSubheading
+      {Junior Software Developer}{Dec. 2019 -- June 2020}
+      {Singularis Lab LLC.}{Volgograd, Russia}
+    \CVItemListStart
+      \CVItem{Developed a Geometric 3D core for a CAD-systems}
+      \CVItem{CV/ML, semantic proximity of images}
+    \CVItemListEnd
+  
+  \CVSubHeadingListEnd
+
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+
+\section{Projects and Research}
+
+ \CVSubHeadingListStart
+    \GithubProjectDescription
+        {Node.js, TypeScript, React}{https://github.com/avdosev/metida}{Team project. Supported article and comments creation}
+  \CVSubHeadingListEnd
+
+
+
+%-----CONFERENCES AND PRESENTATIONS--------------------------------------------
+
+\section{Conferences and Presentations}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Winter school URFU "Software engineering and radio engieering"}{Spring 2020}
+      {During the five days of school, I’m learned how improve the soft-skills. }{Sochi, Russia}
+    \CVSubheading
+      { Project "Campus" SKB KONTUR }{Fall 2019}
+      { As part of a four-day field school, he learned the basics of designing in C\#, \\
+      got the skills in using Git, DI containers and the skills in writing clean code. }{ Yekaterinburg, Russia }
+  \CVSubHeadingListEnd
+
+%-----HONORS AND AWARDS--------------------------------------------------------
+\section{Honors and Awards}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What}{When}
+%      {Short Description}{}
+    \CVSubheading
+      {Winner in the fourth season of the Olympiad "I am a Professional" in the direction of "Artificial Intelligence"}{Spring 2021}
+      {}{Moscow, Russia}
+    \CVSubheading
+      {Winner in the fourth season of the Olympiad "I am a Professional" in the direction of "Machine Learning"}{Spring 2021}
+      {}{Moscow, Russia}
+  \CVSubHeadingListEnd
+
+%-----SKILLS-------------------------------------------------------------------
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+     \textbf{Languages}{: English (A2), Russian (Native) } \\
+     \textbf{Programming}{: C++, Python, Dart, TypeScript } \\
+     \textbf{Machine Learning}{: Tensorflow, Keras } \\
+     \textbf{Mobile}{: Flutter, Dart } \\
+     \textbf{Technologies}{: Git, SQL, MongoDB } \\
+    }}
+ \end{itemize}
+    
+%------------------------------------------------------------------------------
+\end{document}
