@@ -1,4 +1,4 @@
-# [Download](https://github.com/avdosev/curriculum_vitae/releases/latest/download/resume.pdf) my resume
+# [Download](https://github.com/tankistqazwsx/curriculum_vitae/releases/latest/download/resume.pdf) my resume
 
 ## Local build
     cd src
