@@ -1,6 +1,6 @@
   %------------------------------------------------------------------------------
 % CV in Latex
-% Author : Nikita Avdosev
+% Author : Bezruchenko Alexei
 % Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
 %------------------------------------------------------------------------------
 
@@ -114,14 +114,12 @@
 
 
 \begin{center}
-   \textbf{\Huge \scshape Avdosev Nikita} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
-   \small +7 917-727-9031 $|$ 
-   \href{mailto:avdosev1@yandex.ru}{\underline{avdosev1@yandex.ru}} $|$ 
-   VK/Telegram @avdosev \\
+   \textbf{\Huge \scshape Bezruchenko Alexei} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+   \small +7 937-746-1213 $|$ 
+   \href{mailto:alexei.bezruchenko@yandex.ru}{\underline{alexei.bezruchenko@yandex.ru}} $|$ 
+   VK/Telegram @Alexei\_bezruchenko \\
    % Be sure to use a professional *personal* email address
-   \href{https://github.com/avdosev}{\underline{Github}} $|$
-   \href{https://www.linkedin.com/in/avdosev/}{\underline{LinkedIn}} $|$
-   \href{https://habr.com/ru/users/avdosev/}{\underline{Habr}}
+   \href{https://github.com/a-bezruchenko}{\underline{Github}}
 \end{center}
 
 %-----EDUCATION----------------------------------------------------------------
@@ -132,12 +130,24 @@
 %      {Institution of Study}{Where it is located}
 
     \CVSubheading
-      {{Master of Software Engieering }}{Sep. 2021 -- July 2023}
-      {ITMO University}{Saint Petersburg, Russia}
-    \CVSubheading
-      {{Bachelor of Computer Science }}{Sep. 2017 -- July 2021}
+      {{Master of Computer Science}}{Sep. 2021 -- July 2023}
       {Volgograd State Technical University}{Volgograd, Russia}
+    \CVItemListStart
+      \CVItem{Implemented the Jacobi SVD algorithm in C++/CUDA}
+      \CVItem{Learned some methods of CUDA programs optimization}
+      \CVItem{Learned more about linear algebra and singular value decomposition}
+    \CVItemListEnd
 
+    \CVSubheading
+      {{Bachelor of Computer Science}}{Sep. 2017 -- July 2021}
+      {Volgograd State Technical University}{Volgograd, Russia}
+    \CVItemListStart
+      \CVItem{Created a patent data analyzer}
+      \CVItem{Developed parser module to parse patent data from US Patent and Trademark Office archive}
+      \CVItem{Utilized the hLDA algorithm for data clustering}
+      \CVItem{Wrote module to compute firm complementarity using method found in other paper}
+      \CVItem{Optimized hLDA for a x2 increase in speed}
+    \CVItemListEnd
 
   \CVSubHeadingListEnd
 
@@ -153,29 +163,12 @@
 %      \CVItemListEnd
 
     \CVSubheading
-      {Mobile Software Developer}{Sep. 2021 -- Present}
-      {Yandex}{Saint-Petersburg, Russia}
+      {Desktop WinForms Developer}{Aug. 2021 -- Present}
+      {ITechLabs}{Volgograd, Russia}
     \CVItemListStart
-      \CVItem{Development of the Yandex.Q mobile application on Flutter}
-      \CVItem{Implemented performance tracking in release mode}
-      \CVItem{Implemented a dark theme}
-    \CVItemListEnd
-
-    \CVSubheading
-      {Software C++ Engineer Intern}{July 2020 -- Aug. 2020}
-      {Intel Corporation}{Nizhny Novgorod, Russia}
-    \CVItemListStart
-      \CVItem{Developed a smart pointer for persistent memory and a specialization for std::atomic}
-      \CVItem{Moved the used collections to use a smart pointer, gaining a performance increase of 10-20\%}
-      \CVItem{Specialization in working with persistent memory and libraries \href{https://github.com/pmem/libpmemobj-cpp}{\underline{libpmemobj-cpp}}, pmdk}
-    \CVItemListEnd
-
-    \CVSubheading
-      {Junior Software Developer}{Dec. 2019 -- June 2020}
-      {Singularis Lab LLC.}{Volgograd, Russia}
-    \CVItemListStart
-      \CVItem{Development and testing a Geometric 3D core for a CAD-systems}
-      \CVItem{CV/ML model for calculating the semantic proximity of images}
+      \CVItem{Supported a desktop application}
+      \CVItem{Added a new FastReport report}
+      \CVItem{Rewrote mail parser to use OAuth instead of basic (login+password) authentication}
     \CVItemListEnd
   
   \CVSubHeadingListEnd
@@ -186,26 +179,13 @@
 
  \CVSubHeadingListStart
     \GithubProjectDescription
-      {Python, Pytorch, Dart, Flutter}{https://github.com/avdosev/watermarks_remover}{Web service for removing watermarks from images}
+      {C++, CUDA}{https://github.com/a-bezruchenko/CUDA_Jacobi_SVD}{CUDA implementation of Jacobi singular value decomposition algorithm}
     \GithubProjectDescription
-      {Dart, Flutter}{https://github.com/avdosev/habr_app}{Habr App. Supports advanced caching and visual customization}
+      {C++}{https://github.com/a-bezruchenko/sqlite_wrapper}{Sqlite wrapper for easier use}
     \GithubProjectDescription
-      {Node.js, TypeScript, React}{https://github.com/avdosev/metida}{Team project. Supported article and comments creation}
-  \CVSubHeadingListEnd
-
-
-
-%-----CONFERENCES AND PRESENTATIONS--------------------------------------------
-
-\section{Conferences and Presentations}
-  \CVSubHeadingListStart
-    \CVSubheading
-      {Winter school URFU "Software engineering and radio engieering"}{February 2020}
-      {During the five days of school, I’m learned how improve the soft-skills. }{Sochi, Russia}
-    \CVSubheading
-      { Project "Campus" SKB KONTUR }{Fall 2019}
-      { As part of a four-day field school, he learned the basics of designing in C\#, \\
-      got the skills in using Git, DI containers and the skills in writing clean code. }{ Yekaterinburg, Russia }
+      {Python}{https://github.com/a-bezruchenko/USPTO-complementarity-analyser}{Patent data analyzer for analysis of technology similarity between firms}
+    \GithubProjectDescription
+      {JavaScript}{https://github.com/a-bezruchenko/myTranslator}{Team project. Translator from Active Oberon to JavaScript}
   \CVSubHeadingListEnd
 
 %-----HONORS AND AWARDS--------------------------------------------------------
@@ -215,11 +195,11 @@
 %      {What}{When}
 %      {Short Description}{}
     \CVSubheading
-      {Winner of the Olympiad "I am a Professional" in the direction of "Artificial Intelligence"}{Spring 2021}
-      {}{Moscow, Russia}
+      {Participated in ACM ICPC Contest 1/4 final}{Fall 2021}
+      {}{Volgograd, Russia}
     \CVSubheading
-      {Winner of the Olympiad "I am a Professional" in the direction of "Machine Learning"}{Spring 2021}
-      {}{Moscow, Russia}
+      {Participated in ACM ICPC Contest 1/4 final}{Fall 2020}
+      {}{Volgograd, Russia}
   \CVSubHeadingListEnd
 
 %-----SKILLS-------------------------------------------------------------------
@@ -227,11 +207,11 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{\item{
-     \textbf{Languages}{: English (A2), Russian (Native) } \\
-     \textbf{Programming}{: C++, Python, Dart, TypeScript } \\
-     \textbf{Machine Learning}{: Tensorflow, Keras } \\
-     \textbf{Mobile}{: Flutter, Dart } \\
-     \textbf{Technologies}{: Git, SQL, MongoDB } \\
+     \textbf{Languages}{: English (B2), Russian (Native) } \\
+     \textbf{Programming}{: C\#, Python, C++ } \\
+     \textbf{Machine Learning}{: sklearn, Tensorflow } \\
+     \textbf{Natural language processing}{: Word2Vec, hLDA } \\
+     \textbf{Technologies}{: Git, SQL (T-SQL) } \\
     }}
  \end{itemize}
     
