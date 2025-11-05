@@ -1,6 +1,3 @@
-% !TEX TS-program = xelatex
-% !TEX encoding = UTF-8 Unicode
-
 %------------------------------------------------------------------------------
 % CV in Latex
 % Author : Bezruchenko Alexei
@@ -9,7 +6,6 @@
 %------------------------------------------------------------------------------
 
 \documentclass[A4,11pt]{article}
-%\documentclass[letterpaper,11pt]{article} %For use in US
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,20 +17,11 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{tikz}
-\usepackage[T1]{fontenc}
-%\input{glyphtounicode}
+\usepackage{fontspec}
 
 %-----FONT OPTIONS-------------------------------------------------------------
 
-% serif
-% \usepackage{palatino}
- \usepackage{times} %This is the default as well
-% \usepackage{charter}
-
-% sans-serif
-% \usepackage{helvet}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\setmainfont{FreeSerif}[]
 
 %-----PAGE SETUP---------------------------------------------------------------
 
@@ -55,9 +42,6 @@
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that .pdf is machine readable/ATS parsable
-%\pdfgentounicode=1
 
 %-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
 \newcommand{\CVItem}[1]{
@@ -122,13 +106,6 @@
 
 \section{Опыт работы}
   \CVSubHeadingListStart
-%    \CVSubheading %Example
-%      {What you did}{When you worked there}
-%      {Who you worked for}{Where they are located}
-%      \CVItemListStart
-%        \CVItem{Why it is important to this employer}
-%      \CVItemListEnd
-
     \CVSubheading
       {Разработчик десктопных приложений (WinForms)}{Август 2021 -- Декабрь 2023}
       {ITechLabs}{Волгоград, Россия}
@@ -153,10 +130,6 @@
 %-----EDUCATION----------------------------------------------------------------
 \section{Образование}
   \CVSubHeadingListStart
-%    \CVSubheading % Example
-%      {Degree Achieved}{Years of Study}
-%      {Institution of Study}{Where it is located}
-
     \CVSubheading
       {{Информатика и вычислительная техника, магистр}}{Сентябрь 2021 -- Июль 2023}
       {Волгоградский государственный технический университет}{Волгоград, Россия}
@@ -194,9 +167,6 @@
 %-----HONORS AND AWARDS--------------------------------------------------------
 \section{Honors and Awards}
   \CVSubHeadingListStart
-%    \CVSubheading %Example
-%      {What}{When}
-%      {Short Description}{}
     \CVSubheading
       {Участник 1/4 финала ACM ICPC }{Осень 2021}
       {}{Волгоград, Россия}
