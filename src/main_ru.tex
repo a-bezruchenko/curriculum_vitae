@@ -1,7 +1,11 @@
-  %------------------------------------------------------------------------------
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
+%------------------------------------------------------------------------------
 % CV in Latex
 % Author : Bezruchenko Alexei
 % Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% 
 %------------------------------------------------------------------------------
 
 \documentclass[A4,11pt]{article}
@@ -17,13 +21,14 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{tikz}
-\input{glyphtounicode}
+\usepackage[T1]{fontenc}
+%\input{glyphtounicode}
 
 %-----FONT OPTIONS-------------------------------------------------------------
 
 % serif
- \usepackage{palatino}
-% \usepackage{times} %This is the default as well
+% \usepackage{palatino}
+ \usepackage{times} %This is the default as well
 % \usepackage{charter}
 
 % sans-serif
@@ -40,13 +45,6 @@
 \addtolength{\topmargin}{-1cm}
 \addtolength{\textheight}{2cm}
 
-% Margins for US Letter size
-%\addtolength{\oddsidemargin}{-0.5in}
-%\addtolength{\evensidemargin}{-0.5in}
-%\addtolength{\textwidth}{1in}
-%\addtolength{\topmargin}{-.5in}
-%\addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
 
 \raggedbottom
@@ -59,7 +57,7 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that .pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+%\pdfgentounicode=1
 
 %-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
 \newcommand{\CVItem}[1]{
@@ -100,7 +98,6 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
-% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
 \newcommand{\CVSubHeadingListEnd}{\end{itemize}}
 \newcommand{\CVItemListStart}{\begin{itemize}}
 \newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -114,17 +111,16 @@
 
 
 \begin{center}
-   \textbf{\Huge \scshape Bezruchenko Alexei} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+   \textbf{\Huge \scshape Безрученко Алексей} \\ \vspace{1pt} 
    \small +7 937-746-1213 $|$ 
    \href{mailto:alexei.bezruchenko@yandex.ru}{\underline{alexei.bezruchenko@yandex.ru}} $|$ 
    Telegram @Alexei\_bezruchenko \\
-   % Be sure to use a professional *personal* email address
    \href{https://github.com/a-bezruchenko}{\underline{Github}}
 \end{center}
 
 %-----WORK EXPERIENCE----------------------------------------------------------
 
-\section{Work Experience}
+\section{Опыт работы}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
@@ -134,48 +130,55 @@
 %      \CVItemListEnd
 
     \CVSubheading
-      {Desktop WinForms Developer}{Aug. 2021 -- Present}
-      {ITechLabs}{Volgograd, Russia}
+      {Разработчик десктопных приложений (WinForms)}{Август 2021 -- Декабрь 2023}
+      {ITechLabs}{Волгоград, Россия}
     \CVItemListStart
-      \CVItem{Supported a desktop application}
-      \CVItem{Added a new FastReport report}
-      \CVItem{Rewrote mail parser to use OAuth instead of basic (login+password) authentication}
+    \CVItem{Технологии: WinForms, SQL Server}
+      \CVItem{Принимал участие в разработке и поддержке десктоп приложения на .NET международного проекта}
+    \CVItemListEnd
+
+    \CVSubheading
+      {Backend разработчик (.NET)}{Февраль 2023 -- Июль 2025}
+      {ITechLabs}{Волгоград, Россия}
+    \CVItemListStart
+      \CVItem{Технологии: ASP.NET, Blazor, PostgresSQL, xUnit}
+      \CVItem{Разработал интеграцию Push-уведомлений приложения с Huawei App Gallery и RuStore}
+      \CVItem{Увеличил покрытие кода тестами с 70\% до 99\%}
+      \CVItem{Увеличил скорость работы импорта данных из CSV в несколько раз, оптимизировав алгоритм и количество обращений в базу данных}
+      \CVItem{Создавал и правил вспомогательные скрипты на Python}
     \CVItemListEnd
   
   \CVSubHeadingListEnd
 
 %-----EDUCATION----------------------------------------------------------------
-\section{Education}
+\section{Образование}
   \CVSubHeadingListStart
 %    \CVSubheading % Example
 %      {Degree Achieved}{Years of Study}
 %      {Institution of Study}{Where it is located}
 
     \CVSubheading
-      {{Master of Computer Science}}{Sep. 2021 -- July 2023}
-      {Volgograd State Technical University}{Volgograd, Russia}
+      {{Информатика и вычислительная техника, магистр}}{Сентябрь 2021 -- Июль 2023}
+      {Волгоградский государственный технический университет}{Волгоград, Россия}
     \CVItemListStart
-      \CVItem{Implemented the Jacobi SVD algorithm in C++/CUDA}
-      \CVItem{Learned some methods of CUDA programs optimization}
-      \CVItem{Learned more about linear algebra and singular value decomposition}
+      \CVItem{Реализовал алгоритм SVD Якоби на C++/CUDA}
+      \CVItem{Изучил некоторые способы оптимизации программ, использующих CUDA}
+      \CVItem{Узнал больше про линейную алгебру и сингулярное разложение}
     \CVItemListEnd
 
     \CVSubheading
-      {{Bachelor of Computer Science}}{Sep. 2017 -- July 2021}
-      {Volgograd State Technical University}{Volgograd, Russia}
+      {{Информатика и вычислительная техника, бакалавр}}{Сентябрь 2017 -- Июль 2021}
+      {Волгоградский государственный технический университет}{Волгоград, Россия}
     \CVItemListStart
-      \CVItem{Created a patent data analyzer}
-      \CVItem{Developed parser module to parse patent data from US Patent and Trademark Office archive}
-      \CVItem{Utilized the hLDA algorithm for data clustering}
-      \CVItem{Wrote module to compute firm complementarity using method found in other paper}
-      \CVItem{Optimized hLDA for a x2 increase in speed}
+      \CVItem{Создал анализатор патентов на основе алгоритма hLDA и метода из другой научной работы}
+      \CVItem{Оптимизировал реализацию hLDA, ускорив её в два раза}
     \CVItemListEnd
 
   \CVSubHeadingListEnd
 
 %-----PROJECTS AND RESEARCH----------------------------------------------------
 
-\section{Projects and Research}
+\section{Проекты}
 
  \CVSubHeadingListStart
     \GithubProjectDescription
@@ -195,11 +198,11 @@
 %      {What}{When}
 %      {Short Description}{}
     \CVSubheading
-      {Participated in ACM ICPC Contest 1/4 final}{Fall 2021}
-      {}{Volgograd, Russia}
+      {Участник 1/4 финала ACM ICPC }{Осень 2021}
+      {}{Волгоград, Россия}
     \CVSubheading
-      {Participated in ACM ICPC Contest 1/4 final}{Fall 2020}
-      {}{Volgograd, Russia}
+      {Участник 1/4 финала ACM ICPC}{Осень 2020}
+      {}{Волгоград, Россия}
   \CVSubHeadingListEnd
 
 %-----SKILLS-------------------------------------------------------------------
@@ -207,11 +210,11 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{\item{
-     \textbf{Languages}{: English (B2), Russian (Native) } \\
-     \textbf{Programming}{: C\#, Python, C++ } \\
+     \textbf{Языки программирования}{: C\# Middle, Python Junior, C++ Junior} \\
+     \textbf{Естественные языки}{: Русский (родной), Английский (B2)} \\
      \textbf{Machine Learning}{: sklearn, Tensorflow } \\
-     \textbf{Natural language processing}{: Word2Vec, hLDA } \\
-     \textbf{Technologies}{: Git, SQL (T-SQL) } \\
+     \textbf{Обработка естественных языков}{: Word2Vec, hLDA } \\
+     \textbf{Технологии}{: ASP.NET, WinForms, Git, SQL (T-SQL, PostgreSQL), xUnit, Blazor } \\
     }}
  \end{itemize}
     
