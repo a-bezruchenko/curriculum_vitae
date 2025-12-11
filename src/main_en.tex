@@ -6,7 +6,6 @@
 %------------------------------------------------------------------------------
 
 \documentclass[A4,11pt]{article}
-%\documentclass[letterpaper,11pt]{article} %For use in US
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -18,19 +17,11 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{tikz}
-\input{glyphtounicode}
+\usepackage{fontspec}
 
 %-----FONT OPTIONS-------------------------------------------------------------
 
-% serif
- \usepackage{palatino}
-% \usepackage{times} %This is the default as well
-% \usepackage{charter}
-
-% sans-serif
-% \usepackage{helvet}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\setmainfont{FreeSerif}[]
 
 %-----PAGE SETUP---------------------------------------------------------------
 
@@ -40,13 +31,6 @@
 \addtolength{\textwidth}{2cm}
 \addtolength{\topmargin}{-1cm}
 \addtolength{\textheight}{2cm}
-
-% Margins for US Letter size
-%\addtolength{\oddsidemargin}{-0.5in}
-%\addtolength{\evensidemargin}{-0.5in}
-%\addtolength{\textwidth}{1in}
-%\addtolength{\topmargin}{-.5in}
-%\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -58,9 +42,6 @@
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that .pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
 %-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
 \newcommand{\CVItem}[1]{
@@ -115,11 +96,10 @@
 
 
 \begin{center}
-   \textbf{\Huge \scshape Bezruchenko Alexei} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+   \textbf{\Huge \scshape Bezruchenko Alexei} \\ \vspace{1pt}
    \small +7 937-746-1213 $|$ 
    \href{mailto:alexei.bezruchenko@yandex.ru}{\underline{alexei.bezruchenko@yandex.ru}} $|$ 
-   Telegram @Alexei\_bezruchenko \\
-   % Be sure to use a professional *personal* email address
+   Telegram \href{https://t.me/Alexei_bezruchenko}{\underline{@Alexei\_bezruchenko}} \\
    \href{https://github.com/a-bezruchenko}{\underline{Github}}
 \end{center}
 
@@ -127,20 +107,16 @@
 
 \section{Work Experience}
   \CVSubHeadingListStart
-%    \CVSubheading %Example
-%      {What you did}{When you worked there}
-%      {Who you worked for}{Where they are located}
-%      \CVItemListStart
-%        \CVItem{Why it is important to this employer}
-%      \CVItemListEnd
-
     \CVSubheading
-      {Desktop WinForms Developer}{Aug. 2021 -- Present}
+      {Backend developer (.NET)}{Aug. 2021 -- July 2025}
       {ITechLabs}{Volgograd, Russia}
     \CVItemListStart
-      \CVItem{Supported a desktop application}
-      \CVItem{Added a new FastReport report}
-      \CVItem{Rewrote mail parser to use OAuth instead of basic (login+password) authentication}
+      \CVItem{Technologies: ASP.NET, Blazor, PostgresSQL, SQL Server, WinForms, xUnit}
+      \CVItem{Integrated push-notifications of app with Huawei App Gallery and RuStore}
+      \CVItem{Increased project test coverage from 70\% to 99\%}
+      \CVItem{Made data import from CSV multiple times faster by optimizing algorithm and decreasing number of database requests}
+      \CVItem{Created utilitary scripts in Python}
+      \CVItem{Took part in developent and support of .NET desktop application of an international project}
     \CVItemListEnd
   
   \CVSubHeadingListEnd
@@ -208,11 +184,11 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{\item{
-     \textbf{Languages}{: English (B2), Russian (Native) } \\
      \textbf{Programming}{: C\#, Python, C++ } \\
+     \textbf{Languages}{: English (B2), Russian (Native) } \\
      \textbf{Machine Learning}{: sklearn, Tensorflow } \\
      \textbf{Natural language processing}{: Word2Vec, hLDA } \\
-     \textbf{Technologies}{: Git, SQL (T-SQL) } \\
+     \textbf{Technologies}{: ASP.NET, WinForms, Git, SQL (T-SQL, PostgreSQL), xUnit, Blazor, Swagger } \\
     }}
  \end{itemize}
     
