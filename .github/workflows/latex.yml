@@ -44,7 +44,7 @@ jobs:
           echo "::set-output name=date::$(date +'%Y-%m-%d')"
           echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
       - name: Download artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           # Тот самый ключ, который мы указывали в upload-artifact
           name: my_doc
