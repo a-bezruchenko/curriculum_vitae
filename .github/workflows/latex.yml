@@ -12,13 +12,13 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         # Переименуйте, если у вас другой файл
-        root_file: main.tex
+        root_file: main_ru.tex
         # Больше параметров в офф. документации
         working_directory: src/
         # Аргументы, к которыми запускать компилятор (latexmk)
         # -jobname=<name> дает возможность поменять имя выходного файла
         args: -jobname=my_doc -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-        compiler: latexmk
+        compiler: xelatex
     # Загружаем собранные pdf-файлы
     - name: Upload pdf document
       uses: actions/upload-artifact@v2
