@@ -2,6 +2,7 @@
 
 ## Local build
     cd src
-    pdflatex main.tex
+    xelatex ru_main.tex
+    xelatex en_main.tex
 
 ## [CV Template](https://github.com/fizixmastr/CV-Resume)
